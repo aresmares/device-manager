@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "device-manager"
+version = "0.1.0"
+description = "Base integration layer for instrument drivers"
+authors = ["Your Name <your.email@example.com>"]
+packages = [
+    { include = "apps"},
+    { include = "device_daemon"},
+    { include = "device_manager"},
+    { include = "drivers"},
+    { include = "models"},
+    { include = "orchestration"},
+    { include = "scripts"},
+    { include = "sdk"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.10.6"
+fastapi = "^0.115.11"
+uvicorn = "^0.34.0"
+requests = "^2.32.3"
+pyyaml = "^6.0.2"
+dotfiles = "^0.6.5"
+result = "^0.17.0"
+dotenv = "^0.9.9"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

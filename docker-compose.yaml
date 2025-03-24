@@ -1,0 +1,14 @@
+
+services:
+
+  device-manager:
+    image: device-manager
+    build:
+      context: .
+      dockerfile: docker/device_manager.Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - ORCHESTRATION=processes
+      - DEVICE_MANAGER_HOST=device-manager
+      - DEVICE_MANAGER_PORT=8080
